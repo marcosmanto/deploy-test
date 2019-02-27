@@ -12,6 +12,6 @@ $whoops = new Whoops\Run();
 $whoops->pushHandler(new Whoops\Handler\PrettyPageHandler());
 $whoops->register();
 
-Kint::dump($_SERVER);
+// Kint::dump($_SERVER);
 
 echo 2 / 0;
