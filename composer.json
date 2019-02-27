@@ -1,6 +1,7 @@
 {
     "require": {
-        "nesbot/carbon": "^2.14"
+        "nesbot/carbon": "^2.14",
+        "filp/whoops": "^2.3"
     },
     "require-dev": {
         "kint-php/kint": "^3.1"

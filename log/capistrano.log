@@ -1,0 +1,102 @@
+# Logfile created on 2019-02-27 14:16:59 -0300 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-27 14:16:59 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [97826de9] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.33.100
+ DEBUG [97826de9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c0874524] Finished in 2.428 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-deploy_project-production-marcos.filho.sh 0.0%
+  INFO Uploading /tmp/git-ssh-deploy_project-production-marcos.filho.sh 100.0%
+  INFO [34302a9c] Running /usr/bin/env chmod 700 /tmp/git-ssh-deploy_project-production-marcos.filho.sh as deploy@192.168.33.100
+ DEBUG [34302a9c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-deploy_project-production-marcos.filho.sh
+  INFO [bf1524be] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [8b9f3cdb] Running /usr/bin/env git ls-remote git@example.com:me/my_repo.git HEAD as deploy@192.168.33.100
+ DEBUG [8b9f3cdb] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env git ls-remote git@example.com:me/my_repo.git HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-27 14:19:21 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0dabb00f] Running /usr/bin/env mkdir -p /tmp as deploy@192.168.33.100
+ DEBUG [0dabb00f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4e914fc5] Finished in 2.311 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-deploy_project-production-marcos.filho.sh 0.0%
+  INFO Uploading /tmp/git-ssh-deploy_project-production-marcos.filho.sh 100.0%
+  INFO [54a996c4] Running /usr/bin/env chmod 700 /tmp/git-ssh-deploy_project-production-marcos.filho.sh as deploy@192.168.33.100
+ DEBUG [54a996c4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-deploy_project-production-marcos.filho.sh
+  INFO [a0ad1e17] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [8a65313e] Running /usr/bin/env git ls-remote git@github.com:marcosmanto/deploy-test.git HEAD as deploy@192.168.33.100
+ DEBUG [8a65313e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env git ls-remote git@github.com:marcosmanto/deploy-test.git HEAD )
+ DEBUG [4356fb44] 	Error reading response length from authentication socket.
+ DEBUG [4356fb44] 	a8c42d20c551931eecea0897cb9ee49b458b71c3	HEAD
+  INFO [4356fb44] Finished in 4.276 seconds with exit status 0 (successful).
+  INFO [9dfa9cc3] Running /usr/bin/env mkdir -p /home/deploy/apps/deploy_project/shared /home/deploy/apps/deploy_project/releases as deploy@192.168.33.100
+ DEBUG [9dfa9cc3] Command: /usr/bin/env mkdir -p /home/deploy/apps/deploy_project/shared /home/deploy/apps/deploy_project/releases
+  INFO [7fa30d96] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [50db722b] Running [ -f /home/deploy/apps/deploy_project/current/REVISION ] as deploy@192.168.33.100
+ DEBUG [50db722b] Command: [ -f /home/deploy/apps/deploy_project/current/REVISION ]
+ DEBUG [884b0d77] Finished in 0.072 seconds with exit status 1 (failed).
+ DEBUG [a2ad04fd] Running [ -f /home/deploy/apps/deploy_project/repo/HEAD ] as deploy@192.168.33.100
+ DEBUG [a2ad04fd] Command: [ -f /home/deploy/apps/deploy_project/repo/HEAD ]
+ DEBUG [7e5ee9c9] Finished in 0.071 seconds with exit status 1 (failed).
+ DEBUG [52fa7522] Running if test ! -d /home/deploy/apps/deploy_project; then echo "Directory does not exist '/home/deploy/apps/deploy_project'" 1>&2; false; fi as deploy@192.168.33.100
+ DEBUG [52fa7522] Command: if test ! -d /home/deploy/apps/deploy_project; then echo "Directory does not exist '/home/deploy/apps/deploy_project'" 1>&2; false; fi
+ DEBUG [276aba8a] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [1b076a72] Running /usr/bin/env git clone --mirror git@github.com:marcosmanto/deploy-test.git /home/deploy/apps/deploy_project/repo as deploy@192.168.33.100
+ DEBUG [1b076a72] Command: cd /home/deploy/apps/deploy_project && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env git clone --mirror git@github.com:marcosmanto/deploy-test.git /home/deploy/apps/deploy_project/repo )
+ DEBUG [408d6c8e] 	Cloning into bare repository '/home/deploy/apps/deploy_project/repo'...
+ DEBUG [408d6c8e] 	Error reading response length from authentication socket.
+  INFO [408d6c8e] Finished in 5.354 seconds with exit status 0 (successful).
+ DEBUG [7f60dbac] Running if test ! -d /home/deploy/apps/deploy_project/repo; then echo "Directory does not exist '/home/deploy/apps/deploy_project/repo'" 1>&2; false; fi as deploy@192.168.33.100
+ DEBUG [7f60dbac] Command: if test ! -d /home/deploy/apps/deploy_project/repo; then echo "Directory does not exist '/home/deploy/apps/deploy_project/repo'" 1>&2; false; fi
+ DEBUG [d002e80c] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [b482caa2] Running /usr/bin/env git remote set-url origin git@github.com:marcosmanto/deploy-test.git as deploy@192.168.33.100
+ DEBUG [b482caa2] Command: cd /home/deploy/apps/deploy_project/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env git remote set-url origin git@github.com:marcosmanto/deploy-test.git )
+  INFO [295fd8fa] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [a2c03a6d] Running /usr/bin/env git remote update --prune as deploy@192.168.33.100
+ DEBUG [a2c03a6d] Command: cd /home/deploy/apps/deploy_project/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [720a1568] 	Fetching origin
+ DEBUG [720a1568] 	Error reading response length from authentication socket.
+  INFO [720a1568] Finished in 4.304 seconds with exit status 0 (successful).
+ DEBUG [e31e9779] Running if test ! -d /home/deploy/apps/deploy_project/repo; then echo "Directory does not exist '/home/deploy/apps/deploy_project/repo'" 1>&2; false; fi as deploy@192.168.33.100
+ DEBUG [e31e9779] Command: if test ! -d /home/deploy/apps/deploy_project/repo; then echo "Directory does not exist '/home/deploy/apps/deploy_project/repo'" 1>&2; false; fi
+ DEBUG [efb69184] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [dca2618c] Running /usr/bin/env mkdir -p /home/deploy/apps/deploy_project/releases/20190227171927 as deploy@192.168.33.100
+ DEBUG [dca2618c] Command: cd /home/deploy/apps/deploy_project/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/deploy_project/releases/20190227171927 )
+  INFO [f7418d07] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [f4e5db4d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/deploy_project/releases/20190227171927 as deploy@192.168.33.100
+ DEBUG [f4e5db4d] Command: cd /home/deploy/apps/deploy_project/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/deploy_project/releases/20190227171927 )
+  INFO [45af688d] Finished in 0.192 seconds with exit status 0 (successful).
+ DEBUG [3976b9ea] Running if test ! -d /home/deploy/apps/deploy_project/repo; then echo "Directory does not exist '/home/deploy/apps/deploy_project/repo'" 1>&2; false; fi as deploy@192.168.33.100
+ DEBUG [3976b9ea] Command: if test ! -d /home/deploy/apps/deploy_project/repo; then echo "Directory does not exist '/home/deploy/apps/deploy_project/repo'" 1>&2; false; fi
+ DEBUG [bf1d4ca3] Finished in 0.081 seconds with exit status 0 (successful).
+ DEBUG [c6914f86] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.168.33.100
+ DEBUG [c6914f86] Command: cd /home/deploy/apps/deploy_project/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-deploy_project-production-marcos.filho.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [af290d64] 	a8c42d20c551931eecea0897cb9ee49b458b71c3
+ DEBUG [af290d64] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [a1423af3] Running if test ! -d /home/deploy/apps/deploy_project/releases/20190227171927; then echo "Directory does not exist '/home/deploy/apps/deploy_project/releases/20190227171927'" 1>&2; false; fi as deploy@192.168.33.100
+ DEBUG [a1423af3] Command: if test ! -d /home/deploy/apps/deploy_project/releases/20190227171927; then echo "Directory does not exist '/home/deploy/apps/deploy_project/releases/20190227171927'" 1>&2; false; fi
+ DEBUG [c8f325f8] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [3a2dcbd6] Running /usr/bin/env echo "a8c42d20c551931eecea0897cb9ee49b458b71c3" > REVISION as deploy@192.168.33.100
+ DEBUG [3a2dcbd6] Command: cd /home/deploy/apps/deploy_project/releases/20190227171927 && /usr/bin/env echo "a8c42d20c551931eecea0897cb9ee49b458b71c3" > REVISION
+  INFO [8e6f6c2b] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [c7f945a1] Running if test ! -d /home/deploy/apps/deploy_project/releases/20190227171927; then echo "Directory does not exist '/home/deploy/apps/deploy_project/releases/20190227171927'" 1>&2; false; fi as deploy@192.168.33.100
+ DEBUG [c7f945a1] Command: if test ! -d /home/deploy/apps/deploy_project/releases/20190227171927; then echo "Directory does not exist '/home/deploy/apps/deploy_project/releases/20190227171927'" 1>&2; false; fi
+ DEBUG [59c103c9] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [35d9d3f0] Running /usr/bin/env composer install --no-dev --quiet as deploy@192.168.33.100
+ DEBUG [35d9d3f0] Command: cd /home/deploy/apps/deploy_project/releases/20190227171927 && /usr/bin/env composer install --no-dev --quiet
+  INFO [4166512f] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [028898f1] Running /usr/bin/env ln -s /home/deploy/apps/deploy_project/releases/20190227171927 /home/deploy/apps/deploy_project/releases/current as deploy@192.168.33.100
+ DEBUG [028898f1] Command: /usr/bin/env ln -s /home/deploy/apps/deploy_project/releases/20190227171927 /home/deploy/apps/deploy_project/releases/current
+  INFO [968fb348] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [df5fb9fd] Running /usr/bin/env mv /home/deploy/apps/deploy_project/releases/current /home/deploy/apps/deploy_project as deploy@192.168.33.100
+ DEBUG [df5fb9fd] Command: /usr/bin/env mv /home/deploy/apps/deploy_project/releases/current /home/deploy/apps/deploy_project
+  INFO [5a4d6c8e] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [1f4b4538] Running /usr/bin/env ls -x /home/deploy/apps/deploy_project/releases as deploy@192.168.33.100
+ DEBUG [1f4b4538] Command: /usr/bin/env ls -x /home/deploy/apps/deploy_project/releases
+ DEBUG [a78682e9] 	20190227171927
+ DEBUG [a78682e9] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [838cff34] Running if test ! -d /home/deploy/apps/deploy_project/releases; then echo "Directory does not exist '/home/deploy/apps/deploy_project/releases'" 1>&2; false; fi as deploy@192.168.33.100
+ DEBUG [838cff34] Command: if test ! -d /home/deploy/apps/deploy_project/releases; then echo "Directory does not exist '/home/deploy/apps/deploy_project/releases'" 1>&2; false; fi
+ DEBUG [5ff0a436] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [446c1a25] Running /usr/bin/env echo "Branch master (at a8c42d20c551931eecea0897cb9ee49b458b71c3) deployed as release 20190227171927 by marcos.filho" >> /home/deploy/apps/deploy_project/revisions.log as deploy@192.168.33.100
+ DEBUG [446c1a25] Command: cd /home/deploy/apps/deploy_project/releases && /usr/bin/env echo "Branch master (at a8c42d20c551931eecea0897cb9ee49b458b71c3) deployed as release 20190227171927 by marcos.filho" >> /home/deploy/apps/deploy_project/revisions.log
+  INFO [617d4158] Finished in 0.081 seconds with exit status 0 (successful).
