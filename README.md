@@ -314,6 +314,20 @@ I will use the same pool for example.com site but the best practice would be to 
 
 + **2.11)** PHP-FPM creates cache and sometimes after an deploy update the page stays the same. In that case run `sudo service php7.2 reload` 
 
+## 3) Deploy Cycle 
++ **3.1)** After changes are made in the project, commit these changes locally first:
+
+      $ git add .
+      $ git commit -m 'Change commited'
++ **3.2)** Push those changes to github: 
+
+      $ git push
+
++ **3.3)** Run `cap production deploy` again 
+
+
+
+
 ### [References]
 #### PHP-FPM Cache
 * [https://ma.ttias.be/how-to-clear-php-opcache/](https://ma.ttias.be/how-to-clear-php-opcache/) 
