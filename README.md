@@ -318,7 +318,8 @@ I will use the same pool for example.com site but the best practice would be to 
 #### PHP-FPM Cache
 * [https://ma.ttias.be/how-to-clear-php-opcache/](https://ma.ttias.be/how-to-clear-php-opcache/) 
 #### Composer cache
-* [Topic 4 of this excelent article](https://moquet.net/blog/5-features-about-composer-php/)
+* [Topic 4 of this excelent article](https://moquet.net/blog/5-features-about-composer-php/) 
+
 Loading composer components from cache requires zip and unzip linux libs and this make the deploy faster. 
 #### SSH host configurations
 [Simplify Your Life With an SSH Config File](https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/)
@@ -326,4 +327,5 @@ Loading composer components from cache requires zip and unzip linux libs and thi
 [How To Install PHP (7.2, 7.1 & 5.6) on Debian 8 Jessie](https://tecadmin.net/install-php7-on-debian/)
 #### Error connecting to github via public key
 [Solution for 'ssh: connect to host github.com port 22: Connection timed out' error](http://www.inanzzz.com/index.php/post/wa1f/solution-for-ssh-connect-to-host-github-com-port-22-connection-timed-out-error) 
+
 Sometimes due to network changes we are unable to connect on defaul 22 port. But this article give us an alternative. 
