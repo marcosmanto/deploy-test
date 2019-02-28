@@ -313,3 +313,17 @@ I will use the same pool for example.com site but the best practice would be to 
 + **2.10)** To deploy, on the project root folder run `cap production deploy` 
 
 + **2.11)** PHP-FPM creates cache and sometimes after an deploy update the page stays the same. In that case run `sudo service php7.2 reload` 
+
+### [References]
+#### PHP-FPM Cache
+* [https://ma.ttias.be/how-to-clear-php-opcache/](https://ma.ttias.be/how-to-clear-php-opcache/) 
+#### Composer cache
+* [Topic 4 of this excelent article](https://moquet.net/blog/5-features-about-composer-php/)
+Loading composer components from cache requires zip and unzip linux libs and this make the deploy faster. 
+#### SSH host configurations
+[Simplify Your Life With an SSH Config File](https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/)
+#### Installing PHP on Debian 8
+[How To Install PHP (7.2, 7.1 & 5.6) on Debian 8 Jessie](https://tecadmin.net/install-php7-on-debian/)
+#### Error connecting to github via public key
+[Solution for 'ssh: connect to host github.com port 22: Connection timed out' error](http://www.inanzzz.com/index.php/post/wa1f/solution-for-ssh-connect-to-host-github-com-port-22-connection-timed-out-error) 
+Sometimes due to network changes we are unable to connect on defaul 22 port. But this article give us an alternative. 
